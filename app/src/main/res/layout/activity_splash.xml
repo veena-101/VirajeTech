@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.SplashActivity">
+
+
+    <ImageView
+        android:id="@+id/img_splash"
+        android:layout_width="@dimen/hundred_dp"
+        android:layout_height="@dimen/hundred_dp"
+        android:layout_marginTop="@dimen/two_hundred_dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/ic_launcher" />
+
+
+    <TextView
+        android:id="@+id/tv_splash_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/eighteen_sp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/fifteen_dp"
+        android:layout_below="@+id/img_splash"
+        android:layout_centerInParent="true"
+        android:text="@string/app_title"/>
+
+
+    <com.courses.virajetech.utils.HorizontalDottedProgress
+        android:layout_width="@dimen/one_fifty_dp"
+        android:layout_height="@dimen/fifteen_dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/fifteen_dp"
+        android:layout_below="@+id/tv_splash_title"/>
+
+
+
+
+</RelativeLayout>

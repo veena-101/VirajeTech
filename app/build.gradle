@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+android {
+    namespace "com.courses.virajetech"
+    compileSdkVersion 35
+
+    signingConfigs {
+        VirajeTech {
+            keyAlias 'viraje'
+            keyPassword KEY_PASSWORD
+            storeFile file('D:/AndroidStudioProjects/VirajeTech/keystore/new_keystore.jks')
+            storePassword KEYSTORE_PASSWORD
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.courses.virajetech"
+        minSdkVersion 24
+        targetSdkVersion 35
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        signingConfig signingConfigs.VirajeTech
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.VirajeTech
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.VirajeTech
+            debuggable true
+            jniDebuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    sourceSets {
+        main {
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
+    dependenciesInfo {
+        includeInApk true
+        includeInBundle true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Use AndroidX libraries instead of deprecated support libraries
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.1'
+ // or similar stable version
+
+    // Google & Firebase (latest stable)
+    implementation(platform("com.google.firebase:firebase-bom:33.15.0"))
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-crashlytics'
+
+    implementation 'com.google.android.gms:play-services-auth:20.7.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    implementation 'com.google.android.gms:play-services-ads:22.6.0'
+
+    // Other dependencies
+    implementation 'com.facebook.android:facebook-android-sdk:16.3.0'
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    implementation 'androidx.credentials:credentials:1.5.0'
+    implementation 'androidx.credentials:credentials-play-services-auth:1.5.0'
+    implementation 'com.google.android.libraries.identity.googleid:googleid:1.1.1'
+
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'org.jsoup:jsoup:1.16.1'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.razorpay:checkout:1.6.33'
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.15.3'
+}
+
+apply plugin: 'com.google.gms.google-services'

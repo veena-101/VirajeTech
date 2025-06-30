@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.courses.virajetech">
+
+
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".utils.AppController"
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <property
+            android:name="android.adservices.AD_SERVICES_CONFIG"
+            android:resource="@xml/gma_ad_services_config"
+            tools:replace="android:resource"/>
+
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/fb_app_id" />
+
+        <!-- Required for Crashlytics -->
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="true" />
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_Qk0ZjJiwKaKx8X" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+
+            android:resource="@drawable/ic_notification" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
+
+        <service android:name=".notifications.MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.LoginActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+
+
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.PrivacyPolicyActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.TermsConditionsActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.BookmarksActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.SubscriptionActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.ExamsActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.LMSActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.ExamsSeriesActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.LMSSeriesActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.AnalysisActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.NotificationsActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.CategoryExamsListActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.MyProfileActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.LMSCategoryList"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.ExamInstructionsActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.TakeExamActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.AddFeedBackActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.ResultActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.CheckOutActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.TakeExamSectionWiseActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.ExamsSeriesList"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.PayUPaymentGatway"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.TakeExamSectionWiseTimeActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.ExamsHistoryActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".getkey.KeyTakeExamSectionWiseTimeActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".getkey.KeyTakeExamSectionWiseActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".getkey.KeyTakeExamActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.OfflinePaymentActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+
+        <activity
+            android:name=".activities.LMSSeriesCategoryListActivity"
+            android:configChanges="orientation|screenSize"
+            tools:ignore="Instantiatable" />
+    </application>
+
+</manifest>

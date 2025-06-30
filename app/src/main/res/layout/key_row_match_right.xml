@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drag_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_key_row_match_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/fifteen_sp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/five_dp"
+        android:text="AAA"/>
+
+    <TextView
+        android:id="@+id/ed_key_row_match_ans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/fifteen_dp"
+        android:layout_toLeftOf="@+id/tv_key_row_match_correct_ans"
+        android:background="@drawable/take_exam_bg"
+        android:digits="0987654321"
+        android:hint="@string/address"
+        android:inputType="none"
+        android:paddingLeft="@dimen/ten_dp"
+        android:paddingTop="@dimen/three_dp"
+        android:paddingRight="@dimen/ten_dp"
+        android:paddingBottom="@dimen/three_dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+    <TextView
+        android:id="@+id/tv_key_row_match_correct_ans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/fifteen_dp"
+        android:background="@color/green_500"
+        android:digits="0987654321"
+        android:hint="@string/address"
+        android:inputType="none"
+        android:paddingLeft="@dimen/ten_dp"
+        android:paddingTop="@dimen/three_dp"
+        android:paddingRight="@dimen/ten_dp"
+        android:paddingBottom="@dimen/three_dp"
+        android:textColor="@color/white_color"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</RelativeLayout>
